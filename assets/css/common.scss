@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import "_var", "_mixin";
+@font-face{
+    font-family: notoS;
+    font-weight: 300;
+    src: url("../font/NotoSansKR-Light.eot");
+    src:local("%"),
+        url("../font/NotoSansKR-Light.woff2") format("woff2"),
+        url("../font/NotoSansKR-Light.woff") format("woff"),
+        url("../font/NotoSansKR-Light.otf") format("opentype");
+}
+@font-face{
+    font-family: notoS;
+    font-weight: 400;
+    src: url("../font/NotoSansKR-DemiLight.eot");
+    src:local("%"),
+        url("../font/NotoSansKR-DemiLight.woff2") format("woff2"),
+        url("../font/NotoSansKR-DemiLight.woff") format("woff"),
+        url("../font/NotoSansKR-DemiLight.otf") format("opentype");
+}
+@font-face{
+    font-family: notoS;
+    font-weight: 500;
+    src: url("../font/NotoSansKR-Medium.eot");
+    src:local("%"),
+        url("../font/NotoSansKR-Medium.woff2") format("woff2"),
+        url("../font/NotoSansKR-Medium.woff") format("woff"),
+        url("../font/NotoSansKR-Medium.otf") format("opentype");
+}
+@font-face{
+    font-family: futura;
+    font-weight: 300;
+    src: url("../font/Futura-SCTOT-Light.woff") format("woff"),
+        url("../font/Futura\ SCTOT\ Light.ttf") format("truetype");
+}
+@font-face{
+    font-family: futura;
+    font-weight: 400;
+    src: url("../font/Futura-ICG-Light.woff") format("woff"),
+        url("../font/Futura\ ICG\ Light.ttf") format("truetype");
+}
+@font-face{
+    font-family: futura;
+    font-weight: 600;
+    src: 
+        url("../font/futura\ medium\ bt.ttf") format("truetype");
+}
+@font-face{
+    font-family: futura;
+    font-weight: 500;
+    src: url("../font/Futura-Light-Regular.woff") format("woff"),
+        url("../font/Futura\ Light\ Regular.otf") format("opentype");
+}
+@font-face{
+    font-family: futuralt;
+    src: url("../font/Futura-Std-Light-Oblique.woff") format("woff"),
+        url("../font/Futura\ Std\ Light\ Oblique.ttf") format("truetype");
+}
+
+/* tag reset */
+body , h1 ,h2, h3, h4 , h5 ,h6,ul ,button , p { padding: 0;margin: 0;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+button{border: none;background: none;cursor: pointer;}
+img{vertical-align: top;border: none;max-width: 100%;}
+address{font-style: normal;}
+header, nav, section, article, footer{display: block;}
+
+/* common class */
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.clearfix:after{content: "";display: block;clear: both;}
+.sr-only{opacity: 0;}
+.cnt{height: 100vh;}
+.crossline{position: absolute;width: 1px;height: 100%;background: #333333;}
+body { 
+    font-family: notoS; font-weight: 500;color: #333333;
+}
+/* skip */
+#skip a{ 
+    position: absolute;top: 0;left: -9999px;z-index: 1000;
+    &:focus{height: 50px;left: 0;background: #333333;color: #ffffff;text-align: center;line-height: 50px;width: 100%;
+}
+}
+
+#btnOpen{
+    @include transition(all 0.5s);
+    display: block;background: #000000;width: 20px;height: 20px;position: fixed;left: 5%;top: 50%;z-index: 500;
+     &.squre{
+        @include transform(rotate(360deg)); 
+        width: 20px;height: 20px;background: #000000;}
+    &.triangle{
+        @include transform(rotate(720deg)); 
+        background: none;border-top: 20px solid #000;border-left: 10px solid transparent;border-right: 10px solid transparent;width: 23px;height: 23px;margin-left: -2px;}
+    &.circle{
+        width: 20px;height: 20px;background: #000000;border-radius: 50%;border:  solid #000;}
+    } 
+#circle {position: fixed; width: 50px;height: 50px;left:calc(5% - 15px);top: calc(50% - 15px);
+    div {position: absolute; border-radius: 50%; background: #000000; transform: scale(1);}
+    .c1 { width: 100%;height: 100%; top: 0; left: 0; animation: wave 2s linear 0s infinite normal;background: #000000;} 
+    .c2 { width: 66.666%;height: 66.666%;top: 16.667%;left: 0; right: 0;margin: 0 auto;-webkit-animation: wave2 2s linear 0s infinite normal;-moz-animation: wave2 2s linear 0s infinite normal;-o-animation: wave2 2s linear 0s infinite normal;animation: wave2 2s linear 0s infinite normal;}
+    .c3 { width: 33.333%;height: 33.333%; top: 33.3335%; left: 0;right: 0;margin: 0 auto;}
+}
+    #snb {
+        @include transform(translateY(-50%));
+       position: fixed;right: 100%;top: 50%;color: #ffffff;background: rgb(0, 0, 0);z-index: 1000;width: 100%;height: 100vh;
+      
+       ul {
+           font-family: futura;font-size: 80px;line-height: 2.5;width: 100%;height: 100%;margin-top: 5%;
+           li{width: 50%;margin-left: 20%;
+            a:hover , a:focus{ font-size: 85px;}
+        }
+       }
+       .btn_close{
+           width:50px;height: 50px;z-index: 1000;left: 4%;top: 50%;position: absolute;margin-top: -25px;
+        .line {
+            @include transition(all 0.5s);  
+            display: block;width: 100%;height: 4px;background: #ffffff;position: absolute;
+                &.top {top: 0;}
+                &.btm {top: 40px;}
+            }
+        &:hover ,&:focus {
+            .line{
+                @include transition(all 0.2s);
+                &.top {@include transform(rotate(405deg));
+                    top: 20px;}
+                &.btm {@include transform(rotate(-405deg));
+                    top: 20px;}
+             }   
+        }
+      }
+      &.active {
+        .btn_close{ 
+            .top {
+             @include transform(rotate(45deg));
+             top: 20px;}
+            .btm{
+                @include transform(rotate(-45deg));
+                top: 20px;}
+            }
+      }
+    }
+    
+    #footer{
+        position: fixed;top: 95%;left: 2%;font-size: 15px;color: #d4d4d4;font-family: futuralt;
+    }
