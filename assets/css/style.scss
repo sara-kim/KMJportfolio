@@ -74,8 +74,8 @@ header, nav, section, article, footer{display: block;}
 .sr-only{opacity: 0;}
 .cnt{height: 100vh;}
 .crossline{position: absolute;width: 1px;height: 100%;background: #333333;}
-body { 
-    font-family: notoS; font-weight: 500;color: #333333;
+html, body { 
+    font-family: notoS; font-weight: 500;color: #333333; width: 100%;height: 100%;
 }
 /* skip */
 #skip a{ 
@@ -103,7 +103,7 @@ body {
     .cline2{right: 50%;}
         .scbox{
             @include transition(all 0.5s);
-            width: 50%;float: left;text-align: center;height: 55%;margin-top: 25%;
+            width: 50%;float: left;text-align: center;height: 50%;margin-top: 25%;
             h3{font-family: futura;font-weight: 400;font-size: 60px;line-height: 1.2;
              &:after{content:""; display: block;width: 60px;height: 3px;background: #333333;margin: 0 auto;margin-top: 60px;}   
              }
@@ -133,7 +133,7 @@ body {
     } 
 #profile {
     h5{font-size: 20px;font-family: futura;font-weight: 600;margin-bottom: 30px;
-    &:after{content:"";width: 40px;height: 3px;background: #333333;display: block;margin-top: 5px;}
+    &:after{content:"";width: 40px;height: 3px;background: #333333;display: block;}
     }
     .cline3{left:20%;}
     .wid{ float: left;width: 25%;}
@@ -220,8 +220,8 @@ body {
         li {
             @include transition(background-size 0.5s ease-in);
             float: left;width: 50%;height: 100vh; background:no-repeat center center; background-size: 500%;
-            a{display: inline-block;padding: 0 40px;padding-top: 70%;
-            h5 {font-size: 50px;font-weight: 300;padding-bottom: 20px;} 
+            a{display: inline-block;padding: 0 50px;padding-top: 70%;
+            h5 {font-size: 55px;font-weight: 300;padding-bottom: 20px;line-height: 1;} 
             p {font-size: 14px;font-weight: 500;} 
             span {font-weight: 300;line-height: 20;letter-spacing: 4px;font-size: 20px;}  
             }
@@ -255,11 +255,11 @@ body {
 }
 #baskinBox{
     text-align: center;
-    .cline4{left: 25%;top: 0;}
+    .cline11{left:0%;top: 0;}
     .brTxt{
         @include transform(translateY(-50%));
         width: 25%;position: fixed;top: 50%;font-family: futura;color: #333333;
-        h6 {font-weight: 400;font-size: 60px;line-height: 1.2;
+        h6 {font-weight: 400;font-size: 60px;line-height: 1;
         &:after{content:""; display: block;width: 50%;height: 2px;background: #333;margin: 0 auto;margin-top: 30px;margin-bottom: 30px;} 
         }
         strong {font-size: 17px;font-weight: 500; }
@@ -267,6 +267,7 @@ body {
         span {font-weight: 300;letter-spacing: 2px;font-size: 20px;}
     }
     .brImg {
+
         width: 75%;position: absolute;right: 0;
     }
 }
@@ -295,7 +296,7 @@ body {
 #vidpb{
     text-align: center;
     .cline2{right: 50%;top: 0;}
-    .vid {width: 50%;height: 100vh;float: left;}
+    .vid {width: 50%;height: 100%;float: left;}
     .vidtxt{
         h3{
             @include transform(translateY(-50%)); width: 50%;
@@ -307,17 +308,167 @@ body {
         display: inline-block;color: #fff;font-family: futura; 
         li {
             @include transition(background-size 0.5s ease-in);
-            float: left;width: 50%;height: 100vh; background:no-repeat center center; background-size: 500%;
+            float: left;width: 50%;height: 100vh; background:no-repeat center center; background-size: 200%;
             a{display: inline-block;padding: 0 40px;padding-top: 70%;
-            h5 {font-size: 50px;font-weight: 300;padding-bottom: 20px;} 
-            p {font-size: 14px;font-weight: 500;} 
-            span {font-weight: 300;line-height: 20;letter-spacing: 4px;font-size: 20px;}  
+            h5 {font-size: 55px;font-weight: 300;padding-bottom: 30px;line-height: 1;} 
+            p {font-size: 17px;font-weight: 400;letter-spacing: 1px;} 
+            span {font-weight: 300;line-height: 20;letter-spacing: 4px;font-size: 20px;bottom: 0;}  
             }
-            &:last-child {background-image: url("../images/web/cinema_bg_3x_black.jpg");}
-            &:first-child {background-image: url("../images/web/br_bg_3x.jpg");}
-            &:hover,&:focus {
-                background-size: 550%;}
+            }
         }
+        .cont1{
+            ul li{background-size: 250%;
+                &:last-child {background-image: url("../images/visual/handybox_bg_3x.jpg");}
+                &:first-child {background-image: url("../images/visual/musium_bg_3x.jpg");
+                    h5 {font-family: notoS; font-weight: 300; font-size: 45px;line-height: 1.2;}
+            }
+            &:hover,&:focus {
+                background-size: 280%;}
+        } }
+        .cont2{
+            ul li {
+                &:first-child {background-image: url("../images/visual/myth_bg.jpg");
+                    background-size: 200%;
+                    &:hover,&:focus {
+                        background-size: 220%;}}   
+                &:last-child {
+                    background-size: 400%;
+                    background-image: url("../images/visual/visual_bg2_3x.jpg");}
+                    &:hover,&:focus {
+                        background-size: 450%;}
+            }
+        }
+   
+}
+
+//vid-swpter
+.swiper-container {width: 100%;height: 100vh;}
+.swiper-slide {text-align: center;font-size: 18px;background: #fff;}
+.swiper-pagination-bullet {
+    width: 20px;height: 20px;text-align: center;line-height: 20px;font-size: 12px;color:#000;opacity: 1;background: rgba(255, 255, 255,0.5);}
+.swiper-pagination-bullet-active {color:#333;font-weight: 500;background: #ffffff;}
+.swiper-wrapper{
+     .swiper-slide{color: #000000;}
+}
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
+    top: 2%;
+    height: 30px;
+}
+
+//vid - musium
+.btn_muClose{
+    width:50px;height: 50px;z-index: 1000;right: 4%;top: 4%;position: fixed;
+    .line {
+        @include transition(all 0.5s);  
+        display: block;width: 100%;height: 2px;background: #333;position: absolute;
+            &.top {@include transform(rotate(45deg));
+                top: 20px;}
+            &.btm {@include transform(rotate(-45deg));
+                top: 20px;}
+        }
+    &:hover,&:focus { 
+     .line{
+        @include transition(all 0.2s);
+        &.top {@include transform(rotate(405deg));
+            top: 20px;}
+        &.btm {@include transform(rotate(-405deg));
+            top: 20px;}
+     }   
+    }
+}
+#musiumBox{
+    text-align: center;
+    .cline9{right: 0;top: 0;}
+    .brTxt{
+        @include transform(translateY(-50%));
+        width: 25%;position: fixed;top: 50%;font-family: futura;color: #333333; right: 0;
+        h6 {font-weight: 400;font-size: 45px;line-height: 1;font-family: notoS;font-weight: 300;padding: 0 40px;
+        &:after{content:""; display: block;width: 50%;height: 2px;background: #333;margin: 0 auto;margin-top: 30px;margin-bottom: 30px;} 
+        }
+        strong {font-size: 17px;font-weight: 500; }
+        p{font-weight: 300;font-size: 14px;margin-bottom: 20px;margin-top: 10px;}
+        span {font-weight: 300;letter-spacing: 2px;font-size: 20px;}
+    }
+    .brImg {
+        width: 75%;position: absolute;left: 0;
+    }
+}
+
+//vid - HANDYBOX
+#hdBox{
+    text-align: center;
+    .cline10{top: 0;right: 0;}
+    .brTxt{
+        @include transform(translateY(-50%));
+        width: 25%;position: fixed;top: 50%;font-family: futura;color: #333333; right: 0;
+        h6 {font-weight: 400;font-size: 50px;line-height: 1;padding: 0 40px;
+        &:after{content:""; display: block;width: 50%;height: 2px;background: #333;margin: 0 auto;margin-top: 30px;margin-bottom: 30px;} 
+        }
+        strong {font-size: 17px;font-weight: 500; }
+        p{font-weight: 300;font-size: 14px;margin-bottom: 20px;margin-top: 10px;}
+        span {font-weight: 300;letter-spacing: 2px;font-size: 20px;}
+    }
+    .brImg {
+        width: 75%;position: absolute;left: 0;
+    }
+}
+
+//vid-myth
+#mythBox{
+    text-align: center;
+    .cline13{right: 0;top: 0; z-index: 2;}
+    .brTxt{
+        @include transform(translateY(-50%));
+        width: 25%;position: fixed;top: 50%;font-family: futura;color: #333333; right: 0;
+        h6 {font-weight: 400;font-size: 50px;line-height: 1;font-weight: 300;padding: 0 40px;
+        &:after{content:""; display: block;width: 50%;height: 2px;background: #333;margin: 0 auto;margin-top: 30px;margin-bottom: 30px;} 
+        }
+        strong {font-size: 17px;font-weight: 500; }
+        p{font-weight: 300;font-size: 14px;margin-bottom: 20px;margin-top: 10px;font-family: notoS;}
+        span {font-weight: 300;letter-spacing: 2px;font-size: 20px;}
+    }
+    .brImg {
+        width: 75%;position: absolute;left: 0;
+    }
+    .swiper-wrapper{
+        .swiper-slide {background: #f3f3f3 no-repeat center center;
+            &:nth-child(1){background-image:url("../images/visual/myth_01.jpg");}
+            &:nth-child(2){background-image:url("../images/visual/myth_02.jpg");}
+            &:nth-child(3){background-image:url("../images/visual/myth_03.jpg");}
+            &:nth-child(4){background-image:url("../images/visual/myth_04.jpg");}
+            &:nth-child(5){background-image:url("../images/visual/myth_05.jpg");}
+            &:nth-child(6){background-image:url("../images/visual/myth_06.jpg");}
+            &:nth-child(7){background-image:url("../images/visual/myth_07.jpg");}
+            &:nth-child(8){background-image:url("../images/visual/myth_08.jpg");}
+            &:nth-child(9){background-image:url("../images/visual/myth_09.jpg");}
+            &:nth-child(10){background-image:url("../images/visual/myth_10.jpg");}
+            &:nth-child(11){background-image:url("../images/visual/myth_11.jpg");}
+        }
+    }
+}
+.swiper-button-prev ,.swiper-button-next {color: #fff;background: rgba(0, 0, 0,.2);padding: 10px;font-size: 35px;}
+.swiper-button-prev{left: 0;}
+.swiper-button-next {right: 0;}
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {color: #fff;}
+
+//vid -typeface
+#tyBox{
+    text-align: center;
+    .cline12{right: 0;top: 0;}
+    .brTxt{
+        @include transform(translateY(-50%));
+        width: 25%;position: fixed;top: 50%;font-family: futura;color: #333333; right: 0;
+        h6 {font-weight: 400;font-size: 50px;line-height: 1;font-family: notoS;font-weight: 300;padding: 0 40px;
+        &:after{content:""; display: block;width: 50%;height: 2px;background: #333;margin: 0 auto;margin-top: 30px;margin-bottom: 30px;} 
+        }
+        strong {font-size: 17px;font-weight: 500; }
+        p{font-weight: 300;font-size: 14px;margin-bottom: 20px;margin-top: 10px;}
+        span {font-weight: 300;letter-spacing: 2px;font-size: 20px;}
+        img { width: 100%;height: 100%;}
+    }
+    .brImg {
+        width: 75%;position: absolute;left: 0; overflow: hidden;
+        img { width: 100%;height: 100vh;}
     }
 }
 

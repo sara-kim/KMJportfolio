@@ -7,13 +7,15 @@
     <link rel="icon" href="../assets/images/favicon.ico">
     <link rel="apple-touch-icon" href="../assets/images/favicon2.png">
     <link rel="shortcut icon" href="../assets/images/favicon2.png">
+    <link rel="stylesheet" href="../assets/css/swiper.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <!--[if lt IE 9]>
         <script src="assets/js/html5shiv.min.js"></script>
         <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-    <script src="../assets/js/jquery-1.12.4.min.js"></script>  
+    <script src="../assets/js/jquery-1.12.4.min.js"></script> 
+    <script src="../assets/js/swiper.min.js"></script> 
     <script src="../assets/js/common.js"></script>  
 </head>
 <body>
@@ -24,22 +26,49 @@
    <section id="vidpb">
        <span class="crossline cline2"></span>
        <div class="vid vidList">
-           <ul>
-               <li>
-                   <a href="">
-                <h5>CHAMELEON CINEMA</h5>
-                <P>PC WEB</P>
-                <span>PERIOD | 2019 . 11 </span>
-               </a>
-            </li>
-            <li>
-                <a href="">
-                <h5>BASKIN ROBINS</h5>
-                <P>MOBILE WEB</P>
-                <span>PERIOD | 2019 . 12 </span>
-            </a>
-          </li>
-           </ul>
+           <!-- Swiper -->
+            <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide vid vidList cont1">
+                    <ul>
+                        <li>
+                            <a href="musium_detail.html">
+                         <h5>국립김해박물관</h5>
+                         <P>WEB DESIGN</P>
+                         <span>PERIOD | 2019 . 10 </span>
+                        </a>
+                     </li>
+                     <li>
+                         <a href="handybox_detail.html">
+                         <h5>HANDYBOX</h5>
+                         <P>UI/UX DESIGN</P>
+                         <span>PERIOD | 2019 . 9 </span>
+                     </a>
+                   </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide vid vidList cont2">
+                    <ul>
+                        <li>
+                            <a href="myth_detail.html">
+                         <h5>MYTHOROGY</h5>
+                         <P>EDITORIAL DESIGN</P>
+                         <span>PERIOD | 2019 . 6 </span>
+                        </a>
+                     </li>
+                     <li>
+                         <a href="typeface_detail.html">
+                         <h5>TYPEFACE</h5>
+                         <P>TYPOGRAPHY DESIGN</P>
+                         <span>PERIOD | 2018 . 5 </span>
+                     </a>
+                   </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            </div>
            <div class="vid vidtxt">
             <h3>VISUAL<br>DESIGN</h3>
           </div>

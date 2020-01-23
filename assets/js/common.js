@@ -41,15 +41,26 @@ $(document).ready(function (){
         //console.log(hdTop, select , profile ,profile-100);
 
         if(hdTop >= 0 && hdTop <= select -50) {
-          $openBtn.removeClass();
+          $openBtn.removeClass().addClass('squre');
         }
-        else if ( hdTop > select && hdTop <= profile-50 ){
-          $openBtn.removeClass().addClass('triangle');
-        } else {
+        else if ( hdTop > select && hdTop <= profile-50){
           $openBtn.removeClass().addClass('circle');
+        } else {
+          $openBtn.removeClass().addClass('squre');
         }
       } , 30);
 
+    });
+
+    //swiper- vid
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
     });
 
 });
