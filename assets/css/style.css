@@ -304,10 +304,10 @@ html, body {
     font-size: 15px;
     font-family: futuralt; }
     #profile #prbox3 .answer li {
-      margin-bottom: 20px; }
+      margin-bottom: 17px; }
       #profile #prbox3 .answer li:first-child {
         font-size: 22px;
-        margin-bottom: 25px; }
+        margin-bottom: 24px; }
 #profile #prbox4 {
   margin-top: 30%; }
   #profile #prbox4 h5, #profile #prbox4 ul, #profile #prbox4 p {
@@ -830,47 +830,71 @@ html, body {
     #header ul {
       font-size: 17px; }
 
-  #select {
-    background: rgba(255, 194, 204, 0.5); }
-    #select .cline2 {
-      top: 50%;
-      right: 0;
-      left: 0; }
-    #select .scbox {
-      text-align: center;
-      height: 50%;
-      margin-top: 15%;
-      width: 100%;
-      float: none; }
-      #select .scbox h3 {
-        font-size: 50px; }
-        #select .scbox h3:after {
-          margin-top: 15px;
-          margin-bottom: 15px; }
-      #select .scbox a {
-        margin-top: 0; }
-      #select .scbox.web:hover, #select .scbox.web:focus {
-        margin-top: 10%; }
-        #select .web:hover:after {
-          content: "";
-          background: url("../images/web/cinema_bg_3x.png") no-repeat center;
-          display: block;
-          width: 100%;
-          height: 50%;
-          position: absolute;
-          z-index: -1;
-          background-size: cover; }
-      #select .scbox.visual:hover, #select .scbox.visual:focus {
-        margin-top: 10%; }
-        #select .visual:hover:after {
-          content: "";
-          background: url("../images/visual/visual_bg2_3x.jpg") no-repeat center;
-          display: block;
-          width: 100%;
-          height: 50%;
-          position: absolute;
-          z-index: -1;
-          background-size: cover; }
+  #select .cline2 {
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    left: 0%; }
+  #select .scbox {
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    float: none;
+    position: relative;
+    border: 1px solid transparent;
+    margin-top: 0; }
+    #select .scbox h3 {
+      -webkit-transition: letter-spacing 0.5s;
+      -moz-transition: letter-spacing 0.5s;
+      -o-transition: letter-spacing 0.5s;
+      transition: letter-spacing 0.5s;
+      font-size: 50px;
+      margin-top: 20%; }
+      #select .scbox h3:after {
+        margin-top: 15px;
+        margin-bottom: 15px; }
+    #select .scbox a {
+      margin-top: 0; }
+    #select .scbox.web:hover, #select .scbox.web:focus {
+      margin-top: 0%; }
+      #select .scbox.web:hover h3, #select .scbox.web:focus h3 {
+        -webkit-transform: letter-spacing;
+        -moz-transform: letter-spacing;
+        -o-transform: letter-spacing;
+        -ms-transform: letter-spacing;
+        transform: letter-spacing;
+        letter-spacing: 10px; }
+      #select .web:hover:after {
+        content: "";
+        background: url("../images/web/cinema_bg_3x.png") no-repeat center;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+        top: 0;
+        left: 0; }
+    #select .scbox.visual:hover, #select .scbox.visual:focus {
+      margin-top: 0%; }
+      #select .scbox.visual:hover h3, #select .scbox.visual:focus h3 {
+        -webkit-transform: letter-spacing;
+        -moz-transform: letter-spacing;
+        -o-transform: letter-spacing;
+        -ms-transform: letter-spacing;
+        transform: letter-spacing;
+        letter-spacing: 10px; }
+      #select .visual:hover:after {
+        content: "";
+        background: url("../images/visual/visual_bg2_3x.jpg") no-repeat center;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+        top: 0;
+        left: 0; }
 
   #profile h5 {
     font-size: 20px;
