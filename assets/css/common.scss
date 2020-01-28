@@ -145,3 +145,51 @@ body {
     #footer{
         position: fixed;top: 95%;left: 2%;font-size: 15px;color: #d4d4d4;font-family: futuralt;
     }
+
+    //1760px
+@media all and (max-width:1760px){
+
+}
+//1280px
+@media all and (max-width:1280px){
+    
+}
+//1024px
+@media all and (max-width:1280px){
+   
+        
+}
+
+//960px
+@media all and (max-width:960px){
+    .crossline{position: absolute;width: 100%;height: 1px;background: #333333;}
+    #btnOpen{
+        @include transition(all 0.5s);
+       left: calc( 50% - 10px );top: 5%;}  
+    #circle {left:calc(50% - 25px);top: calc(5% - 15px);} 
+    #snb {
+        position: fixed;right: 100%;top: 50%;color: #ffffff;background: rgb(0, 0, 0);z-index: 1000;width: 100%;height: 100vh;
+        ul {
+           font-size: 65px;width: 100%;height: 100%;margin-top: 30%;
+            li{
+                @include transform(translateY(-50%));
+                width: 100%;left: 100%;line-height: 3;
+            a:hover , a:focus{ font-size: 67px;}
+            }
+            &:last-child {background: #000;}
+        }
+        .btn_close{ left:calc( 50% - 25px ) ;top: 7%;}
+    } 
+    #footer{
+        position: fixed;top: 95%;right: 2%;font-size: 15px;color: #d4d4d4;font-family: futuralt;left: 0;
+    }
+    
+}
+//680px
+@media all and (max-width:680px){
+    
+}
+//480px
+@media all and (max-width:480px){
+    
+}

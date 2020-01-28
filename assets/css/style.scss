@@ -480,9 +480,91 @@ html, body {
 @media all and (max-width:1280px){
     
 }
+
+//1024px
+@media all and (max-width:1024px){
+  
+}
+
 //960px
 @media all and (max-width:960px){
-    
+    #header { height: 100vh;
+        h1{
+            img {width: 500px;} 
+        }
+        h2{font-size: 25px;}
+        ul {font-size: 17px;}
+    } 
+    #select {background: rgba(255, 194, 204,.5);
+        .cline2{
+            top: 50%;right: 0;left: 0;}
+            .scbox{
+                text-align: center;height: 50%;margin-top: 15%;width: 100%;float: none;
+                h3{font-size: 50px;
+                    &:after{margin-top: 15px;margin-bottom: 15px;}  
+                    }
+                    
+                 a{ margin-top: 0;}
+                    &.web:hover , &.web:focus{margin-top: 10%;
+                       @at-root #select .web:hover:after { content:""; background:url("../images/web/cinema_bg_3x.png") no-repeat center;display: block;width: 100%;height: 50%;position: absolute;z-index: -1;background-size: cover;}
+                    }
+                    &.visual:hover ,&.visual:focus{margin-top: 10%;
+                        @at-root #select .visual:hover:after { content:""; background:url("../images/visual/visual_bg2_3x.jpg") no-repeat center;display: block;width: 100%;height: 50%;position: absolute;z-index: -1;background-size: cover;}
+                    }
+                }
+        } 
+        #profile {
+            h5{font-size: 20px;font-family: futura;font-weight: 600;margin-bottom: 30px;
+            &:after{content:"";width: 40px;height: 3px;background: #333333;display: block;}
+            }
+            .cline3{top:20%;}
+            .wid{ float: none;width: 100%;height: 25%;}
+            #prbox2{text-align: right; background: rgb(255, 182, 182); width: 100%;height: 25%;
+                ul , p {margin-right: 20px;}
+                ul {font-family: futura;font-size: 50px;font-weight: 400;line-height: 1;margin-top: 30%;}
+                p{font-size: 18px; font-weight: 300;}
+                span{font-weight: 500;}
+            }
+            #prbox3{margin-top: 5%;
+               h5, ul {margin-left: 20px;}
+                .title {display: inline-block; font-size: 15px;font-weight: 500;
+                    li{margin-bottom: 17px;
+                    &:first-child{font-size: 20px;}
+                    &:nth-child(2):after{width: 45px;}
+                    &:nth-child(4):after{width: 55px;}}
+                li+li:after { content:""; width: 30px;height: 2px;background: #333333;display: block;}
+            }
+                .answer {display: inline-block;font-size: 15px;font-family: futuralt;
+                li{margin-bottom: 17px;
+                &:first-child{font-size: 22px;margin-bottom: 25px;}}}
+            }
+            #prbox4{margin-top: 10%; position: relative;
+                h5, ul,p {margin-left: 20px;}
+                p { font-size: 18px;font-family:futuralt;margin-top: 15px;margin-bottom: 10px;}
+                p+p {margin-top: 0px;}
+                ul { font-size: 15px; margin-bottom: 10px;
+                    li {margin-bottom: 10px;height: 20px;
+                    .gagebox {
+                        display: inline-block;width: 45%;height: 4px;background: #eaeaea;margin-left: 40px; margin-right: 30%;margin-top: 9px;
+                        .deskil1 { 
+                            @include transition(all 0.5s);
+                             @include transform(width);}
+                    &:after{
+                        content:"";display: block;height: 4px;background: #333;width: 0%;}}
+                        .deskil1:after {@include transform(width); content:"";width: 80%;}
+                        .deskil2:after {content:"";width: 90%;}
+                        .deskil3:after {content:"";width: 75%;}
+                        .deskil4:after {content:"";width: 50%;}
+                        .deskil5:after {content:"";width: 55%;}
+                        .deskil6:after {content:"";width: 90%;}
+                        .deskil7:after {content:"";width: 80%;}
+                        .deskil8:after {content:"";width: 50%;}
+                     }
+                   }
+            }
+        
+        }
+           
 }
 //680px
 @media all and (max-width:680px){

@@ -11,7 +11,7 @@ $(document).ready(function (){
     
     $win.resize(function (){
         var winWid = $(window).width();
-        if (winWid <= 1260 ) {
+        if (winWid <= 960 ) {
             $("body").removeClass().addClass("mobile");
         } else {
             $("body").removeClass().addClass("pc");

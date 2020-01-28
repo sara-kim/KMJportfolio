@@ -276,4 +276,63 @@ body {
   color: #d4d4d4;
   font-family: futuralt; }
 
+@media all and (max-width: 960px) {
+  .crossline {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #333333; }
+
+  #btnOpen {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    left: calc( 50% - 10px );
+    top: 5%; }
+
+  #circle {
+    left: calc(50% - 25px);
+    top: calc(5% - 15px); }
+
+  #snb {
+    position: fixed;
+    right: 100%;
+    top: 50%;
+    color: #ffffff;
+    background: black;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh; }
+    #snb ul {
+      font-size: 65px;
+      width: 100%;
+      height: 100%;
+      margin-top: 30%; }
+      #snb ul li {
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 100%;
+        left: 100%;
+        line-height: 3; }
+        #snb ul li a:hover, #snb ul li a:focus {
+          font-size: 67px; }
+      #snb ul:last-child {
+        background: #000; }
+    #snb .btn_close {
+      left: calc( 50% - 25px );
+      top: 7%; }
+
+  #footer {
+    position: fixed;
+    top: 95%;
+    right: 2%;
+    font-size: 15px;
+    color: #d4d4d4;
+    font-family: futuralt;
+    left: 0; } }
+
 /*# sourceMappingURL=common.css.map */
