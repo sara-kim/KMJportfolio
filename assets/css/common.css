@@ -206,10 +206,15 @@ body {
     line-height: 2.5;
     width: 100%;
     height: 100%;
-    margin-top: 2%; }
+    margin-top: 8%;
+    position: absolute;
+    top: 50vh;
+    margin-top: -35vh; }
     #snb ul li {
-      width: 50%;
-      margin-left: 20%; }
+      width: 70%;
+      margin-left: 20%;
+      height: 15%;
+      margin-bottom: 25px; }
       #snb ul li a:hover, #snb ul li a:focus {
         font-size: 85px; }
   #snb .btn_close {
@@ -306,18 +311,21 @@ body {
     height: 100vh; }
     #snb ul {
       font-size: 65px;
-      width: 100%;
       height: 100%;
-      margin-top: 30%; }
+      margin-top: -25vh;
+      width: 100%; }
       #snb ul li {
         -webkit-transform: translateY(-50%);
         -moz-transform: translateY(-50%);
         -o-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        width: 100%;
+        width: 80%;
         left: 100%;
-        line-height: 3; }
+        line-height: 3;
+        height: 20%;
+        margin-bottom: 0px;
+        margin-left: 18%; }
         #snb ul li a:hover, #snb ul li a:focus {
           font-size: 67px; }
       #snb ul:last-child {
@@ -334,5 +342,11 @@ body {
     color: #d4d4d4;
     font-family: futuralt;
     left: 0; } }
+@media all and (max-width: 720px) {
+  #snb ul {
+    font-size: 68px;
+    margin-left: 0; }
+    #snb ul li a:hover, #snb ul li a:focus {
+      font-size: 72px; } }
 
 /*# sourceMappingURL=common.css.map */
