@@ -32,3 +32,12 @@
     -moz-border-radius: $value;  
   border-radius: $value;  
 }
+@mixin aniDelay($value...) {
+    -webkit-animation-delay:$value;
+    -moz-animation-delay:$value;
+    animation-delay:$value;
+}
+@mixin aniDiraction {
+    -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
