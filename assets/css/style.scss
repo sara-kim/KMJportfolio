@@ -173,7 +173,7 @@ html, body {
                     @include transition(all 0.5s);
                      @include transform(width);}
             &:after{
-                @include transform (width);
+                @include transform ( width);
                 content:"";display: block;height: 4px;background: #333;width: 0%;}}
                 .deskil1:after {@include transform(width); content:"";width: 80%;}
                 .deskil2:after {content:"";width: 90%;}
@@ -237,7 +237,8 @@ html, body {
 
 }
 //web- publishing common class
-.clineWeb{left:0%;top: 0;}
+.clineWeb{left:50%;top: 0;}
+.clineWeb_m{display: none;}
 .webtxt{
     h3{
         @include transform(translateY(-50%)); width: 50%;
@@ -257,8 +258,9 @@ html, body {
 }
 .webImg{width: 75%;position: absolute;right: 0;}
 #webpb{
-    text-align: center;
-    .cline2{right: 50%;top: 0;}
+    text-align: center;width: 100%;height: 100%;overflow: hidden;
+    .clineWeb{right: 50%;top: 0;}
+    .clineWeb_m{display: none;}
     .web {width: 50%;height: 100vh;float: left;}
     .pbList{
         display: inline-block;color: #fff;font-family: futura; 
@@ -272,8 +274,7 @@ html, body {
             }
             &:last-child {background-image: url("../images/web/cinema_bg_3x_black.jpg");}
             &:first-child {background-image: url("../images/web/br_bg_3x.jpg");}
-            &:hover,&:focus {
-                background-size: 550%;}
+            &:hover,&:focus {background-size: 550%;}
         }
     }
 }
@@ -441,7 +442,7 @@ html, body {
 
 //960px
 @media all and (max-width:960px){
-    #header { height: 100vh;
+    #header { height: 100vh; padding:0px;overflow: hidden;
         h1{
             img {width: 500px;} 
         }
@@ -554,7 +555,7 @@ html, body {
     .vidList{
         top: 50vh;
         li {
-            float: left;width: 50%;height: 50vh; background:no-repeat center center; background-size: 100%;
+            height: 50vh;background-size: 100%;
             a{padding: 0 20px;padding-top: 18vh;
             h5 {font-size: 50px;padding-bottom: 20px;} 
             span {line-height: 3;}  }
@@ -594,16 +595,63 @@ html, body {
     .vidImg {height: 75vh;overflow: hidden;}}
     .swiper-slide {height: 75vh;}
     .swiper-button-prev ,.swiper-button-next {margin-top: -15vh;}
-}
 //vid -typeface
 #tyBox{ .vidImg img { width: 100%;height: 75vh;}}
+
+//web- publishing common class
+.clineWeb{top: 25%;width: 100%;height: 1px;position: fixed;z-index: 1000;left: 0;right: 0;}
+.webtxt{
+    display: block;width: 100%;height: 50%;background: #ffffff;position: absolute;top: 0;z-index: 900;
+    h3{
+        @include transform(translateY(-50%)); width: 100%;
+        font-size: 60px;top: 25vh;right: 0;color: #333333;  
+        }
+}
+.webTxtbox{
+    width: 100%;top: 10%;height: 30%;background: #ffffff;z-index: 900;text-align: left;display: inline-block;
+    h6 {width: 45%;margin-top: 20vh;left: 20%;font-size: 38px;padding-left: 40px;
+    &:after{content:""; display: block;width: 2px;height: 20%;background: #333;margin: 0 auto;position: absolute; top: 19vh;right: calc(43% + 25px) ;} 
+    }
+    strong {margin-top: -6.5vh;display: block;}
+    p { margin-top: 3px;margin-bottom: 3px;}
+    span {font-size: 17px;}
+    strong , p , span {margin-left: 60%;}
+}
+.webImg{width: 100%;height: 75vh;margin-top: 25vh;}
+#webpb{
+    width: 100%;height: 100%;overflow: hidden;
+    .clineWeb{display: none;}
+    .clineWeb_m {width: 100%;height: 1px;left: 0%;display: block;top: 0;}
+    .web {width: 100%;height: 50%;display: block;}
+    .pbList{
+        display: block;position: absolute;top: 50vh;overflow: hidden;
+        li {
+            height: 50vh; background-size: 300%;
+            a{padding: 0 20px;padding-top: 18vh;
+            h5 {font-size: 50px;padding-bottom: 20px;} 
+            span {line-height: 3;}  
+            }
+            &:hover,&:focus {background-size: 350%;}
+        }
+    }
+}
+.btn_webClose{left: calc(50% - 25px);}
+}
 
 //680px
 @media all and (max-width:680px){
 }
-//480px
-@media all and (max-width:480px){
-    
+//580px
+@media all and (max-width:580px){
+    #header {padding: 0;
+        .headerbox {left: 90%;}
+        h1{img {width: 450px;} }
+        h2{ font-family: futura; font-weight: 300; font-size: 25px;position: absolute;right: 0;bottom: 30px;background: #ffffff;padding: 0 10px;}
+        ul { position: absolute;bottom: 5%;left: 5%; font-size: 20px;font-family: futura; font-weight: 500;
+            li {  float: left;
+            + li { padding-left: 20px;}}
+        }
+    } 
 }
 @keyframes wave {
     0%{transform: scale(0);opacity: 1;}
